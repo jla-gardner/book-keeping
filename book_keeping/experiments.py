@@ -40,15 +40,16 @@ def generate_report(
 
 class Experiment:
     def __init__(
-        self, root: os.PathLike = "experiments", project: str = None
+        self, root: os.PathLike = "experiments", project: str = None,
+        _id: str = None
     ) -> None:
         _dir = Path(root) / (project if project else "")
-        self._id = random_id()
+        self._id = _id if _id else random_id()
         while (_dir / self._id).exists():
             self._id = random_id()
         self._dir = _dir / self._id
         self._dir.mkdir(exist_ok=False, parents=True)
-        self._experiment_file = inspect.stack()[1].filename
+        self._experiment_file = Path(inspect.stack()[1].filename)
 
     def file(self, name: str):
         return self._dir / name

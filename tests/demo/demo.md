@@ -1,3 +1,34 @@
+_2022-04-04 11:35 - demo_
+
+# Summary
+
+```python
+dict(
+   complete=True,
+)
+```
+
+# Config
+
+```python
+dict(
+   N=7,
+)
+```
+
+# Artefacts
+
+## Plots
+
+![img.svg](img.svg)
+
+## Other
+
+- [log](log)
+
+# Code
+
+```python
 from book_keeping import Experiment
 
 experiment = Experiment(root="tests", _id="demo")
@@ -20,3 +51,5 @@ def main(N=10):
 
 def test_demo():
     main(N=7)
+
+```
