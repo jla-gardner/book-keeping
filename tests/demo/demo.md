@@ -1,4 +1,4 @@
-_2022-04-04 11:39 - demo_
+_2022-04-04 11:59 - demo_
 
 # Summary
 
@@ -37,7 +37,7 @@ experiment = Experiment(root="tests", _id="demo")
 @experiment.record
 def main(N=10):
     for i in range(N):
-        print(f"{i} = 1")
+        print(f"i = {i}")
 
     svg = """<?xml version="1.0" standalone="no"?>
 <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
