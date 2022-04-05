@@ -1,4 +1,4 @@
-_2022-04-04 11:59 - demo_
+_2022-04-05 16:10 - demo_
 
 # Summary
 
@@ -12,7 +12,12 @@ dict(
 
 ```python
 dict(
-   N=7,
+              N=7,
+   other_kwargs=dict(
+                       a=1,
+                       b=2,
+                   hello=3,
+                ),
 )
 ```
 
@@ -24,7 +29,7 @@ dict(
 
 ## Other
 
-- [log](log)
+-   [log](log)
 
 # Code
 
@@ -35,7 +40,7 @@ experiment = Experiment(root="tests", _id="demo")
 
 
 @experiment.record
-def main(N=10):
+def main(N=10, **kwargs):
     for i in range(N):
         print(f"i = {i}")
 
@@ -51,6 +56,6 @@ def main(N=10):
 
 
 def test_demo():
-    main(N=7)
+    main(N=7, other_kwargs=dict(a=1, b=2, hello=3))
 
 ```

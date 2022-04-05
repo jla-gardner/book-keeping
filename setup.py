@@ -6,7 +6,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="book-keeping",
-    version="0.1.0",
+    version="0.2.0",
     description="Track config and results for digital experiments.",
     long_description=README,
     long_description_content_type="text/markdown",

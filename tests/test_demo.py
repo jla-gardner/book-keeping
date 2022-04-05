@@ -4,7 +4,7 @@ experiment = Experiment(root="tests", _id="demo")
 
 
 @experiment.record
-def main(N=10):
+def main(N=10, **kwargs):
     for i in range(N):
         print(f"i = {i}")
 
@@ -20,4 +20,4 @@ def main(N=10):
 
 
 def test_demo():
-    main(N=7)
+    main(N=7, other_kwargs=dict(a=1, b=2, hello=3))

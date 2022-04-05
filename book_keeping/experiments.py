@@ -8,17 +8,10 @@ from typing import Callable, Dict, List
 from book_keeping.ids import random_id
 from book_keeping.tee import stdout_to_
 from book_keeping.util import (all_files, apply, dual_filter, is_img,
-                               markdown_expand, markdown_link, markdown_list)
+                               markdown_expand, markdown_link, markdown_list,
+                               pretty_dict)
 
 __ME = Path(__file__)
-
-
-def pretty_dict(_dict: Dict) -> str:
-    max_k = max(len(k) for k in _dict.keys())
-    pretty = "dict(\n"
-    for k, v in _dict.items():
-        pretty += f"   {k: >{max_k}}={str(v).strip()},\n"
-    return pretty + ")"
 
 
 def generate_report(
